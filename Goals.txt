@@ -1,0 +1,3 @@
+Project : Make a p2p chess web app and (if possible) export it to itch.io
+To learn : Basic networking, web page creation
+Using : Javascript npm module hyperswarm (https://www.npmjs.com/package/hyperswarm) and JS + CSS + HTML trio
