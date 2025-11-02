@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>External JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: rgb(189, 200, 248);">
+    <hr>
+    <p id="turn_order">White to play!</p>
+    <div class="board">
+        <!-- This is the chess board. -->
+    </div>
+    <button type="button" id="host_button">Host!</button>
+    <button type="button" id="join_button">Join!</button>
+    <div id="room_code_div" class="hidden">
+        <label for="room_code_inputxz">Room code:</label>
+        <input type="text" id="room_code_input" name="room_code_inputxz" required minlength="10" maxlength="10" size="10"></input>
+        <button type="button" id="confirm_room_code_button">Confirm</button>
+    </div>
+    <p id="join_context">You havent taken any action...</p>
+    <p id="illegal_move_shower" class="hidden red_text"><strong>This move is illegal!</strong></p>
+</body>
+<script src="https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js"></script>
+<script type="module" src="main.js"></script>
+</html>
+
+<!-- python -m http.server 8000 -->
