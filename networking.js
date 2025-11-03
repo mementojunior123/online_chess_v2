@@ -54,8 +54,10 @@ class NetworkClient {
         }
     }
     sendMessage(data) {
-        if (this.connection !== undefined) {
+        if (this.connection !== undefined && this.is_connected) {
             this.connection.send(data);
+        } else {
+            console.log(`Attempted to send ${data}, but the connection was not yet established!`)
         }
     }
 }
