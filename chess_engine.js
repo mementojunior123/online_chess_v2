@@ -542,7 +542,16 @@ const GameState = class {
         if (this.squareIsAttacked([start_x + castling_direction, end_y], GameState.switchTeam(piece_color))) {
             return false;
         }
-        
+        const iter_is_over = (val) => {
+            if (castling_direction === -1) {
+                return val <= 1;
+            } else {
+                return val >= 8;
+            }
+        };
+        for (let x = start_x + castling_direction; x += castling_direction; !iter_is_over(x)) {
+            if (this.accessSquare(x, end_y) !== Pieces.NONE) {return false;}
+        }
         return true;
     }
 
