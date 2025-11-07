@@ -549,7 +549,7 @@ const GameState = class {
                 return val >= 8;
             }
         };
-        for (let x = start_x + castling_direction; x += castling_direction; !iter_is_over(x)) {
+        for (let x = start_x + castling_direction; !iter_is_over(x); x += castling_direction) {
             if (this.accessSquare(x, end_y) !== Pieces.NONE) {return false;}
         }
         return true;
